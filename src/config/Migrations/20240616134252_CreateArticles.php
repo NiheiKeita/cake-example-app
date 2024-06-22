@@ -14,7 +14,22 @@ class CreateArticles extends AbstractMigration
      */
     public function change(): void
     {
-        $table = $this->table('articles');
-        $table->create();
+        $this->table('articles')
+            ->addColumn('title', 'text', [
+                'default' => null,
+                'null' => false,
+            ])
+            ->addColumn('body', 'text', [
+                'default' => null,
+                'null' => false,
+            ])
+            ->addColumn('created', 'datetime', [
+                'default' => null,
+                'null' => true,
+            ])
+            ->addColumn('modified', 'datetime', [
+                'default' => null,
+                'null' => true,
+            ])->create();
     }
 }
