@@ -33,7 +33,7 @@ class ArticlesControllerTest extends TestCase
      */
     public function testIndex(): void
     {
-        $this->markTestIncomplete('Not implemented yet.');
+        $this->assertSame("test","error");
     }
 
     /**
