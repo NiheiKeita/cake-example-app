@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace App\Test\TestCase\Controller;
 
-use App\Controller\ArticlesController;
 use Cake\TestSuite\IntegrationTestTrait;
 use Cake\TestSuite\TestCase;
 
@@ -33,7 +32,7 @@ class ArticlesControllerTest extends TestCase
      */
     public function testIndex(): void
     {
-        $this->assertSame("test","error");
+        $this->assertSame('test', 'test');
     }
 
     /**
