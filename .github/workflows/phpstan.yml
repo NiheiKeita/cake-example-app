@@ -1,4 +1,4 @@
-name: LaraStan
+name: PHPStan
 on: [pull_request]
 
 jobs:
