@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-use Cake\ORM\TableRegistry;
+use App\Model\Table\ArticlesTable;
 use function Cake\I18n\__;
 
 /**
@@ -11,7 +11,14 @@ use function Cake\I18n\__;
  */
 class ArticlesController extends AppController
 {
-    protected mixed $Articles = TableRegistry::getTableLocator()->get('Articles');
+    protected ArticlesTable $Articles;
+
+    public function initialize(): void
+    {
+        parent::initialize();
+
+        $this->Articles = $this->fetchTable('Articles');
+    }
 
     /**
      * Index method

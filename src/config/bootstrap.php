@@ -96,6 +96,10 @@ if (file_exists(CONFIG . 'app_local.php')) {
     Configure::load('app_local', 'default');
 }
 
+if (file_exists(CONFIG . 'swagger_bake.php')) {
+    Configure::load('swagger_bake', 'default');
+}
+
 /*
  * When debug = true the metadata cache should only last
  * for a short time.

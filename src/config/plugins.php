@@ -30,4 +30,5 @@ return [
     'Migrations' => ['onlyCli' => true],
 
     // Add your custom plugins here
+    'SwaggerBake' => [],
 ];
